@@ -38,7 +38,7 @@ class NotificationCard extends StatelessWidget {
                     child: Text(
                       title,
                       style: getBoldStyle(
-                        fontSize: 16.sp,
+                        fontSize: 14.sp,
                       ),
                     ),
                   ),

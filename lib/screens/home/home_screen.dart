@@ -88,8 +88,8 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 16)
-                          .r,
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 16)
+                      .r,
                   child: ReadOnlyTextField(
                       hint: 'Search',
                       widget: const Icon(
@@ -99,8 +99,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10)
-                          .r,
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10)
+                      .r,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -136,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             child: Padding(
                               padding:
-                                  const EdgeInsets.symmetric(horizontal: 25),
+                              const EdgeInsets.symmetric(horizontal: 25),
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -144,7 +144,7 @@ class HomeScreen extends StatelessWidget {
                                   Image.asset(specialistDoctor[index]['Image'], height: 50),
                                   Padding(
                                     padding: const EdgeInsets.only(
-                                            top: 20, bottom: 5)
+                                        top: 20, bottom: 5)
                                         .r,
                                     child: Text(
                                       specialistDoctor[index]['Special'],
@@ -156,7 +156,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                   Padding(
                                     padding:
-                                        const EdgeInsets.only(bottom: 20.0),
+                                    const EdgeInsets.only(bottom: 20.0),
                                     child: Text(
                                       'Specialist',
                                       style: getBoldStyle(
@@ -181,8 +181,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10)
-                          .r,
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10)
+                      .r,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

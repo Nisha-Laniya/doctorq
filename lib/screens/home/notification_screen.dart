@@ -26,19 +26,28 @@ class NotificationScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16).r,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text('Today, April 24 2023'),
-                NotificationCard(
+              children: [
+                const Text('Today, April 24 2023'),
+                const NotificationCard(
                   image: ImageAssets.alarm,
                   title: 'Appointment Alarm',
                   subtitle:
                       'Your appointment will be start after 15 minutes, Stay with app and take care.',
                 ),
-                NotificationCard(
+                const NotificationCard(
                   image: ImageAssets.confirm,
                   title: 'Appointment Confirmed',
                   subtitle:
-                  'Appointment confirmed Dr. Jerome Bell call will be held at 11:00 AM | 26 Mar 22.',
+                      'Appointment confirmed Dr. Jerome Bell call will be held at 11:00 AM | 26 Mar 22.',
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10).r,
+                  child: const Text('Yesterday, April 23 2023'),
+                ),
+                const NotificationCard(
+                  image: ImageAssets.feature,
+                  title: 'New Features Available',
+                  subtitle: 'Now you can video while on video call',
                 ),
               ],
             ),
