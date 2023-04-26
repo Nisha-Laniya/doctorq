@@ -38,6 +38,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => BottomNavigationProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (_) => FavoriteProvider(),
+        ),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),

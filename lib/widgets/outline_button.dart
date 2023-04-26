@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../resources/resources.dart';
 
-class Buttons extends StatelessWidget {
+class OutlineButton extends StatelessWidget {
   final String title;
   final VoidCallback onPress;
-  const Buttons({
+  const OutlineButton({
     Key? key,
     required this.title,
     required this.onPress,
@@ -19,19 +19,20 @@ class Buttons extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20).w,
         ),
-        backgroundColor: RGBColorManager.darkBlueRGB,
-        foregroundColor: ColorManager.white,
+        backgroundColor: ColorManager.white,
+        foregroundColor: RGBColorManager.darkBlueRGB,
         minimumSize: Size.fromHeight(
           35.h,
         ),
-        side: const BorderSide(
+        side: BorderSide(
           color: RGBColorManager.darkBlueRGB,
+          width: 1.5
         ),
       ),
       child: Text(
         title,
         style: getSemiBoldStyle(
-          color: ColorManager.white,
+          color: RGBColorManager.darkBlueRGB,
           fontSize: 13.sp
         ),
       ),

@@ -1,5 +1,3 @@
-import 'package:doctorq/screens/bottomnavigationbar/bottom_navigation_screen.dart';
-import 'package:doctorq/screens/congrats/congrats_screen.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../screens/screens.dart';
 
@@ -35,5 +33,17 @@ final List<GetPage<dynamic>> routes = [
   GetPage(
     name: "/NotificationScreen",
     page: () =>  const NotificationScreen(),
+  ),
+  GetPage(
+    name: "/FavoriteScreen",
+    page: () =>  const FavoriteScreen(),
+  ),
+  GetPage(
+    name: "/SpecialistScreen",
+    page: () =>  const SpecialistScreen(),
+  ),
+  GetPage(
+    name: "/TopDoctorScreen",
+    page: () =>  const TopDoctorScreen(),
   ),
 ];

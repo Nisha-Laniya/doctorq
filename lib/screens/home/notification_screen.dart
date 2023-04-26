@@ -1,7 +1,7 @@
-import 'package:doctorq/widgets/notification_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../resources/resources.dart';
+import '../../widgets/widgets.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);
@@ -13,15 +13,17 @@ class NotificationScreen extends StatelessWidget {
         iconTheme: const IconThemeData(
           color: RGBColorManager.darkBlueRGB, //change your color here
         ),
+        leadingWidth: 30.w,
         title: Text(
           'Notification',
-          style: getSemiBoldStyle(color: ColorManager.black, fontSize: 16.sp),
+          style: getSemiBoldStyle(color: ColorManager.black, fontSize: 18.sp),
         ),
         backgroundColor: ColorManager.white,
         elevation: 0,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16).r,
             child: Column(
@@ -41,13 +43,29 @@ class NotificationScreen extends StatelessWidget {
                       'Appointment confirmed Dr. Jerome Bell call will be held at 11:00 AM | 26 Mar 22.',
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 10).r,
+                  padding: const EdgeInsets.only(top: 20).r,
                   child: const Text('Yesterday, April 23 2023'),
                 ),
                 const NotificationCard(
                   image: ImageAssets.feature,
                   title: 'New Features Available',
                   subtitle: 'Now you can video while on video call',
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20).r,
+                  child: const Text('Monday, April 23 2023'),
+                ),
+                const NotificationCard(
+                  image: ImageAssets.alarm,
+                  title: 'Appointment Alarm',
+                  subtitle:
+                  'Your appointment will be start after 15 minutes, Stay with app and take care.',
+                ),
+                const NotificationCard(
+                  image: ImageAssets.confirm,
+                  title: 'Appointment Confirmed',
+                  subtitle:
+                  'Appointment confirmed Dr. Jerome Bell call will be held at 11:00 AM | 26 Mar 22.',
                 ),
               ],
             ),

@@ -25,7 +25,7 @@ class NotificationCard extends StatelessWidget {
                   bottomLeft: const Radius.circular(20).w),
               child: Padding(
                 padding: const EdgeInsets.all(8.0).w,
-                child: Image.asset(image, height: 65.h),
+                child: Image.asset(image, height: 70.h),
               ),
             ),
             Padding(
@@ -44,9 +44,12 @@ class NotificationCard extends StatelessWidget {
                   ),
                   SizedBox(height: 5.h,),
                   SizedBox(
-                    width: 222.w,
-                    child: Text(
-                      subtitle,
+                    width: 200.w,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0).r,
+                      child: Text(
+                        subtitle,
+                      ),
                     ),
                   )
                 ],

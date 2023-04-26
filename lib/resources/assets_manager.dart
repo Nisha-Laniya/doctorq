@@ -34,4 +34,5 @@ class IconAssets {
   static const String mouth = '$iconPath/mouth.png';
   static const String child = '$iconPath/child.jpg';
   static const String nerve = '$iconPath/nerve.jpg';
+  static const String halfStar = '$iconPath/star.png';
 }

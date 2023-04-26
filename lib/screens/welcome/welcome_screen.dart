@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../../resources/resources.dart';
+import '../../widgets/outline_button.dart';
 import '../../widgets/widgets.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -30,7 +31,7 @@ class WelcomeScreen extends StatelessWidget {
                   title: 'Welcome to DoctorQ!',
                 ),
                 const Spacer(),
-                Buttons(
+                OutlineButton(
                   title: 'Sign Up',
                   onPress: () {
                     Get.toNamed(
@@ -41,7 +42,7 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 10.h,
                 ),
-                Buttons(
+                OutlineButton(
                   title: 'Sign In',
                   onPress: () {
                     Get.toNamed(

@@ -64,15 +64,20 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 16).r,
               child: Align(
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: RGBColorManager.lightBlueRGB,
-                      borderRadius: BorderRadius.circular(10).w),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Icon(
-                      Icons.favorite,
-                      color: RGBColorManager.darkBlueRGB,
+                child: GestureDetector(
+                  onTap: () {
+                    Get.toNamed('/FavoriteScreen');
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: RGBColorManager.lightBlueRGB,
+                        borderRadius: BorderRadius.circular(10).w),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(
+                        Icons.favorite,
+                        color: RGBColorManager.darkBlueRGB,
+                      ),
                     ),
                   ),
                 ),
@@ -110,11 +115,16 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 16.sp,
                         ),
                       ),
-                      Text(
-                        'see all',
-                        style: getSemiBoldStyle(
-                          fontSize: 15.sp,
-                          color: RGBColorManager.darkBlueRGB,
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed('/SpecialistScreen');
+                        },
+                        child: Text(
+                          'see all',
+                          style: getSemiBoldStyle(
+                            fontSize: 15.sp,
+                            color: RGBColorManager.darkBlueRGB,
+                          ),
                         ),
                       )
                     ],
@@ -192,11 +202,16 @@ class HomeScreen extends StatelessWidget {
                           fontSize: 16.sp,
                         ),
                       ),
-                      Text(
-                        'see all',
-                        style: getSemiBoldStyle(
-                          fontSize: 15.sp,
-                          color: RGBColorManager.darkBlueRGB,
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed('/TopDoctorScreen');
+                        },
+                        child: Text(
+                          'see all',
+                          style: getSemiBoldStyle(
+                            fontSize: 15.sp,
+                            color: RGBColorManager.darkBlueRGB,
+                          ),
                         ),
                       )
                     ],
@@ -243,7 +258,7 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  'Cardio Specialist',
+                                  '${topDoctor[index]['Special']} Specialist',
                                   style: getRegularStyle(
                                     fontSize: 14.sp,
                                   ),
