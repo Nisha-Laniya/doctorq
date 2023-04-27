@@ -1,3 +1,4 @@
+import 'package:doctorq/provider/homeProvider/date_provider.dart';
 import 'package:flutter/services.dart';
 import 'provider/provider.dart';
 import 'resources/resources.dart';
@@ -40,6 +41,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => FavoriteProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => PickDateProvider()
         ),
       ],
       child: ScreenUtilInit(

@@ -1,4 +1,4 @@
-import 'package:get/get_navigation/src/routes/get_route.dart';
+import 'package:get/get.dart';
 import '../screens/screens.dart';
 
 final List<GetPage<dynamic>> routes = [

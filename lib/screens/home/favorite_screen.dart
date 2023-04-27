@@ -1,60 +1,24 @@
-import 'package:doctorq/provider/homeProvider/favorite_provider.dart';
 import 'package:provider/provider.dart';
-
 import '../../data/data.dart';
 import '../../widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart';
 import '../../resources/resources.dart';
+import '../../provider/provider.dart';
 
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print('build');
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: RGBColorManager.darkBlueRGB, //change your color here
-        ),
-        leadingWidth: 30.w,
-        title: Text(
-          'Favorite Doctor',
-          style: getSemiBoldStyle(
-            color: ColorManager.black,
-            fontSize: 18.sp,
-          ),
-        ),
-        backgroundColor: ColorManager.white,
-        elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16).r,
-            child: Align(
-              child: Container(
-                decoration: BoxDecoration(
-                    color: RGBColorManager.lightBlueRGB,
-                    borderRadius: BorderRadius.circular(10).w),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.filter_list_rounded,
-                    color: RGBColorManager.darkBlueRGB,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+      appBar: appbarDesign(),
       body: Consumer<FavoriteProvider>(
         builder: (context,value,child) {
           return ListView.builder(
-            physics: BouncingScrollPhysics(),
-            itemCount: topDoctor.length,
+            physics: const BouncingScrollPhysics(),
+            itemCount: favoriteDoctor.length,
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.all(10).w,
@@ -73,16 +37,16 @@ class FavoriteScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         ClipRRect(
-                            borderRadius: const BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              bottomLeft: Radius.circular(20),
+                            borderRadius: BorderRadius.only(
+                              topLeft: const Radius.circular(20).w,
+                              bottomLeft: const Radius.circular(20).w,
                             ),
                             child: Image.asset(
-                              topDoctor[index]['Image'],
+                              favoriteDoctor[index]['Image'],
                               height: 90.h,
                               width: 100.w,
                               fit: BoxFit.cover,
-                            )),
+                            ),),
                         Padding(
                           padding: const EdgeInsets.only(left: 15).r,
                           child: Column(
@@ -90,7 +54,7 @@ class FavoriteScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                topDoctor[index]['Name'],
+                                favoriteDoctor[index]['Name'],
                                 style: getBoldStyle(
                                   fontSize: 16.sp,
                                 ),
@@ -107,7 +71,7 @@ class FavoriteScreen extends StatelessWidget {
                                       color: RGBColorManager.darkBlueRGB,
                                     ),
                                     Text(
-                                      topDoctor[index]['Reviews'],
+                                      favoriteDoctor[index]['Reviews'],
                                       style: TextStyle(
                                           fontSize: 12.sp
                                       ),
@@ -146,6 +110,43 @@ class FavoriteScreen extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+
+  appbarDesign() {
+    return AppBar(
+      iconTheme: const IconThemeData(
+        color: RGBColorManager.darkBlueRGB, //change your color here
+      ),
+      leadingWidth: 30.w,
+      title: Text(
+        'Favorite Doctor',
+        style: getSemiBoldStyle(
+          color: ColorManager.black,
+          fontSize: 18.sp,
+        ),
+      ),
+      backgroundColor: ColorManager.white,
+      elevation: 0,
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 16).r,
+          child: Align(
+            child: Container(
+              decoration: BoxDecoration(
+                  color: RGBColorManager.lightBlueRGB,
+                  borderRadius: BorderRadius.circular(10).w),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.filter_list_rounded,
+                  color: RGBColorManager.darkBlueRGB,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -189,7 +190,7 @@ class FavoriteScreen extends StatelessWidget {
                           bottomLeft: Radius.circular(20),
                         ),
                         child: Image.asset(
-                          topDoctor[index]['Image'],
+                          favoriteDoctor[index]['Image'],
                           height: 90.h,
                           width: 100.w,
                           fit: BoxFit.cover,
@@ -201,7 +202,7 @@ class FavoriteScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            topDoctor[index]['Name'],
+                            favoriteDoctor[index]['Name'],
                             style: getBoldStyle(
                               fontSize: 16.sp,
                             ),
@@ -218,7 +219,7 @@ class FavoriteScreen extends StatelessWidget {
                                   color: RGBColorManager.darkBlueRGB,
                                 ),
                                 Text(
-                                  topDoctor[index]['Reviews'],
+                                  favoriteDoctor[index]['Reviews'],
                                   style: getRegularStyle(
                                     fontSize: 12.sp
                                   ),
@@ -227,7 +228,7 @@ class FavoriteScreen extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            '${topDoctor[index]['Special']} Specialist',
+                            '${favoriteDoctor[index]['Special']} Specialist',
                           )
                         ],
                       ),
@@ -240,8 +241,8 @@ class FavoriteScreen extends StatelessWidget {
                             color: RGBColorManager.lightBlueRGB,
                             borderRadius: BorderRadius.circular(10).w),
                         child: Padding(
-                          padding: EdgeInsets.all(8.0).w,
-                          child: Icon(
+                          padding: const EdgeInsets.all(8.0).w,
+                          child: const Icon(
                             Icons.favorite,
                             color: RGBColorManager.darkBlueRGB,
                           ),
@@ -294,3 +295,4 @@ class FavoriteScreen extends StatelessWidget {
     );
   }
 }
+

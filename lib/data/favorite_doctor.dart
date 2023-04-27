@@ -1,6 +1,6 @@
 import '../resources/resources.dart';
 
-List<Map<String,dynamic>> topDoctor = [
+List<Map<String,dynamic>> favoriteDoctor = [
   {
     'Image' : ImageAssets.doctor1,
     'Name' : 'Dr. Jerome Bell',

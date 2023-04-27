@@ -45,24 +45,22 @@ class ReadOnlyTextField extends StatelessWidget {
                 contentPadding: const EdgeInsets.only(left: 5, bottom: 2).r,
                 focusedBorder: const UnderlineInputBorder(
                     borderSide: BorderSide(
-                  color: Colors.white,
+                  color: ColorManager.white,
                   width: 0,
                 )),
                 enabledBorder: const UnderlineInputBorder(
                   borderSide: BorderSide(
-                    color: Colors.white,
+                    color: ColorManager.white,
                     width: 0,
                   ),
                 ),
               ),
             ),
           ),
-          widget == null
-              ? Container()
-              : Padding(
-                  padding: const EdgeInsets.only(right: 10).r,
-                  child: widget,
-                ),
+         Padding(
+           padding: const EdgeInsets.only(right: 10).r,
+           child: widget,
+         ),
         ],
       ),
     );

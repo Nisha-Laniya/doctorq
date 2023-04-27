@@ -1,8 +1,8 @@
-import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../resources/resources.dart';
 import '../../data/data.dart';
+import '../../widgets/widgets.dart';
 
 class TopDoctorScreen extends StatelessWidget {
   const TopDoctorScreen({Key? key}) : super(key: key);
@@ -10,81 +10,12 @@ class TopDoctorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: RGBColorManager.darkBlueRGB, //change your color here
-        ),
-        leadingWidth: 30.w,
-        title: Text(
-          'Top Doctor',
-          style: getSemiBoldStyle(
-            color: ColorManager.black,
-            fontSize: 18.sp,
-          ),
-        ),
-        backgroundColor: ColorManager.white,
-        elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16).r,
-            child: Align(
-              child: Container(
-                decoration: BoxDecoration(
-                    color: RGBColorManager.lightBlueRGB,
-                    borderRadius: BorderRadius.circular(10).w),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.filter_list_rounded,
-                    color: RGBColorManager.darkBlueRGB,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+      appBar: appBarDesign(),
       body: DefaultTabController(
         length: 7,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8.0),
-              child: ButtonsTabBar(
-                  backgroundColor: RGBColorManager.darkBlueRGB,
-                  unselectedBackgroundColor: ColorManager.white,
-                  unselectedLabelStyle: TextStyle(color: RGBColorManager.darkBlueRGB,),
-                  labelStyle:
-                  TextStyle(color: ColorManager.white, fontWeight: FontWeight.bold),
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20).r,
-                  borderColor: RGBColorManager.darkBlueRGB,
-                  radius: 20,
-                  borderWidth: 2,
-                  unselectedBorderColor: RGBColorManager.darkBlueRGB,
-                  tabs: const [
-                    Tab(
-                      text: 'All',
-                    ),
-                    Tab(
-                      text: 'Cardio',
-                    ),
-                    Tab(
-                      text: 'Dental',
-                    ),
-                    Tab(
-                      text: 'Eye',
-                    ),
-                    Tab(
-                      text: 'Brain',
-                    ),
-                    Tab(
-                      text: 'Child',
-                    ),
-                    Tab(
-                      text: 'Nerve',
-                    ),
-              ]),
-            ),
+            const TabBarDesign(),
             Expanded(
               child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
@@ -181,6 +112,43 @@ class TopDoctorScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+
+  AppBar appBarDesign() {
+    return AppBar(
+      iconTheme: const IconThemeData(
+        color: RGBColorManager.darkBlueRGB, //change your color here
+      ),
+      leadingWidth: 30.w,
+      title: Text(
+        'Top Doctor',
+        style: getSemiBoldStyle(
+          color: ColorManager.black,
+          fontSize: 18.sp,
+        ),
+      ),
+      backgroundColor: ColorManager.white,
+      elevation: 0,
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 16).r,
+          child: Align(
+            child: Container(
+              decoration: BoxDecoration(
+                  color: RGBColorManager.lightBlueRGB,
+                  borderRadius: BorderRadius.circular(10).w),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.filter_list_rounded,
+                  color: RGBColorManager.darkBlueRGB,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

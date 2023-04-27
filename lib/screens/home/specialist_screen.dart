@@ -1,4 +1,4 @@
-import 'package:doctorq/data/data.dart';
+import '../../data/data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../resources/resources.dart';
@@ -9,44 +9,11 @@ class SpecialistScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: RGBColorManager.darkBlueRGB, //change your color here
-        ),
-        leadingWidth: 30.w,
-        title: Text(
-          'Specialist Doctor',
-          style: getSemiBoldStyle(
-            color: ColorManager.black,
-            fontSize: 18.sp,
-          ),
-        ),
-        backgroundColor: ColorManager.white,
-        elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16).r,
-            child: Align(
-              child: Container(
-                decoration: BoxDecoration(
-                    color: RGBColorManager.lightBlueRGB,
-                    borderRadius: BorderRadius.circular(10).w),
-                child: const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.filter_list_rounded,
-                    color: RGBColorManager.darkBlueRGB,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
+      appBar: appBarDesign(),
       body: Padding(
         padding: const EdgeInsets.all(12).w,
         child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               mainAxisSpacing: 10,
               crossAxisSpacing: 10
@@ -102,6 +69,43 @@ class SpecialistScreen extends StatelessWidget {
             },
         ),
       )
+    );
+  }
+
+  appBarDesign() {
+    return AppBar(
+      iconTheme: const IconThemeData(
+        color: RGBColorManager.darkBlueRGB, //change your color here
+      ),
+      leadingWidth: 30.w,
+      title: Text(
+        'Specialist Doctor',
+        style: getSemiBoldStyle(
+          color: ColorManager.black,
+          fontSize: 18.sp,
+        ),
+      ),
+      backgroundColor: ColorManager.white,
+      elevation: 0,
+      actions: [
+        Padding(
+          padding: const EdgeInsets.only(right: 16).r,
+          child: Align(
+            child: Container(
+              decoration: BoxDecoration(
+                  color: RGBColorManager.lightBlueRGB,
+                  borderRadius: BorderRadius.circular(10).w),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.filter_list_rounded,
+                  color: RGBColorManager.darkBlueRGB,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

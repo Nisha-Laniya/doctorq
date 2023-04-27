@@ -4,6 +4,7 @@ export './bottomnavigationbar/bottom_navigation_screen.dart';
 export './bottomnavigationbar/second_bottom.dart';
 export './congrats/congrats_screen.dart';
 export './history/history_screen.dart';
+export './home/doctor_profile.dart';
 export './home/favorite_screen.dart';
 export './home/home_screen.dart';
 export './home/notification_screen.dart';

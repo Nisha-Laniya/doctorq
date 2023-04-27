@@ -3,7 +3,9 @@ const String animationPath = 'assets/animations';
 const String iconPath = 'assets/icons';
 
 class ImageAssets {
-  static const String splashDoctor = '$imagePath/splashDoctor.png';
+  static const String onBoarding1 = '$imagePath/onBoarding1.png';
+  static const String onBoarding2 = 'assets/images/onBoarding2.jpeg';
+  static const String onBoarding3 = '$imagePath/onBoarding3.avif';
   static const String doctorQ = '$imagePath/doctorQ.jpg';
   static const String doctorQLogo = '$imagePath/doctorq_logo.jpg';
   static const String doctor1 = '$imagePath/doctor1.png';
