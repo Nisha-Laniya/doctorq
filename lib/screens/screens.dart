@@ -8,6 +8,7 @@ export './home/doctor_profile.dart';
 export './home/favorite_screen.dart';
 export './home/home_screen.dart';
 export './home/notification_screen.dart';
+export './home/review_screen.dart';
 export './home/specialist_screen.dart';
 export './home/top_doctor_screen.dart';
 export './onboarding/onboarding_screen.dart';

@@ -1,5 +1,6 @@
 //GENERATED BARREL FILE 
 export 'buttons.dart';
+export 'doctor_information.dart';
 export 'exist_account.dart';
 export 'notification_card.dart';
 export 'outline_button.dart';

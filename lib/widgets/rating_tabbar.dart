@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../resources/resources.dart';
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 
-class TabBarDesign extends StatelessWidget {
-  const TabBarDesign({
+class RatingTabBar extends StatelessWidget {
+  const RatingTabBar({
     super.key,
   });
 
@@ -30,26 +30,30 @@ class TabBarDesign extends StatelessWidget {
           tabs: const [
             Tab(
               text: 'All',
+              icon: Icon(Icons.star,size: 22,),
             ),
             Tab(
-              text: 'Cardio',
+              text: '5',
+              icon: Icon(Icons.star,size: 22,),
             ),
             Tab(
-              text: 'Dental',
+              text: '4',
+              icon: Icon(Icons.star,size: 22,),
             ),
             Tab(
-              text: 'Eye',
+              text: '3',
+              icon: Icon(Icons.star,size: 22,),
             ),
             Tab(
-              text: 'Brain',
+              text: '2',
+              icon: Icon(Icons.star,size: 22,),
             ),
             Tab(
-              text: 'Child',
+              text: '1',
+              icon: Icon(Icons.star,size: 22,),
             ),
-            Tab(
-              text: 'Nerve',
-            ),
-          ]),
+          ],
+      ),
     );
   }
 }

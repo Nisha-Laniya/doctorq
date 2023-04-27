@@ -20,6 +20,14 @@ class ImageAssets {
   static const String alarm = '$imagePath/alarm.png';
   static const String confirm = '$imagePath/confirm.png';
   static const String feature = '$imagePath/feature.png';
+  static const String patient1 = '$imagePath/patient1.jpeg';
+  static const String patient2 = '$imagePath/patient2.webp';
+  static const String patient3 = '$imagePath/patient3.jpeg';
+  static const String patient4 = '$imagePath/patient4.jpeg';
+  static const String patient5 = '$imagePath/patient5.jpeg';
+  static const String patient6 = '$imagePath/patient6.jpeg';
+  static const String patient7 = '$imagePath/patient7.avif';
+  static const String patient8 = '$imagePath/patient8.jpeg';
 }
 
 class AnimationAssets {

@@ -46,4 +46,8 @@ final List<GetPage<dynamic>> routes = [
     name: "/TopDoctorScreen",
     page: () =>  const TopDoctorScreen(),
   ),
+  GetPage(
+    name: "/ReviewScreen",
+    page: () =>  const ReviewScreen(),
+  ),
 ];
