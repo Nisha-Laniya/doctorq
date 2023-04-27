@@ -113,7 +113,7 @@ class FavoriteScreen extends StatelessWidget {
     );
   }
 
-  appbarDesign() {
+  AppBar appbarDesign() {
     return AppBar(
       iconTheme: const IconThemeData(
         color: RGBColorManager.darkBlueRGB, //change your color here

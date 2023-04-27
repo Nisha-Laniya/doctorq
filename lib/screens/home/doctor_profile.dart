@@ -77,7 +77,7 @@ class DoctorProfile extends StatelessWidget {
     );
   }
 
-  makeAppointment() {
+  Column makeAppointment() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -128,7 +128,7 @@ class DoctorProfile extends StatelessWidget {
     );
   }
 
-  aboutDoctor() {
+  Column aboutDoctor() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -164,7 +164,7 @@ class DoctorProfile extends StatelessWidget {
     );
   }
 
-  doctorCard() {
+  Padding doctorCard() {
     return Padding(
       padding: const EdgeInsets.all(10).w,
       child: Container(
@@ -229,7 +229,7 @@ class DoctorProfile extends StatelessWidget {
     );
   }
 
-  appBarDesign(Future<void> Function() share) {
+  AppBar appBarDesign(Future<void> Function() share) {
     return AppBar(
       iconTheme: const IconThemeData(
         color: RGBColorManager.darkBlueRGB, //change your color here

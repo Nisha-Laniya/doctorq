@@ -72,7 +72,7 @@ class SpecialistScreen extends StatelessWidget {
     );
   }
 
-  appBarDesign() {
+  AppBar appBarDesign() {
     return AppBar(
       iconTheme: const IconThemeData(
         color: RGBColorManager.darkBlueRGB, //change your color here

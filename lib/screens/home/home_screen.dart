@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  topDoctorList() {
+  SizedBox topDoctorList() {
     return SizedBox(
       height: 225.h,
       child: ListView.builder(
@@ -129,7 +129,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  specialistDoctorList() {
+  SizedBox specialistDoctorList() {
     return SizedBox(
       height: 185.h,
       child: ListView.builder(
@@ -188,7 +188,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  appbarDesign() {
+  AppBar appbarDesign() {
     return AppBar(
       backgroundColor: ColorManager.white,
       elevation: 0,
